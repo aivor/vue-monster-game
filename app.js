@@ -39,7 +39,9 @@ new Vue({
 
       this.monsterAttacks();
     },
-    giveUp: function () {},
+    giveUp: function () {
+      this.gameisRunning = false;
+    },
     calculateDamage: function (min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min);
     },
